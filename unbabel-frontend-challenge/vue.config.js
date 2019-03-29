@@ -6,9 +6,3 @@ module.exports = {
       .loader("vue-svg-loader");
   }
 };
-
-module.exports = {
-  configureWebpack: {
-    devtool: "source-map"
-  }
-};

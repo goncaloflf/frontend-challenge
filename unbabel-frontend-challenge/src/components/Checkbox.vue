@@ -43,8 +43,8 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  height: 14px;
-  width: 14px;
+  height: 12px;
+  width: 12px;
   background-color: #eee;
   border-radius: 4px;
   border: 2px solid #859eff;
@@ -74,8 +74,8 @@ export default {
 
 /* Style the checkmark/indicator */
 .container .checkmark:after {
-  left: 5px;
-  top: 1px;
+  left: 4px;
+  top: 0px;
   width: 3px;
   height: 8px;
   border: solid white;
