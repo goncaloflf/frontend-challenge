@@ -9,6 +9,8 @@
         <DialogItem
           v-bind:transcription="transcription"
           v-on:del-transcription="$emit('del-transcription',transcription.id)"
+          v-on:change-voice="changeVoice"
+          v-on:change-text="changeText"
         />
       </div>
     </transition-group>
@@ -24,6 +26,14 @@ export default {
   components: { DialogItem },
   data() {
     return {};
+  },
+  methods: {
+    changeVoice(p) {
+      this.$emit("change-voice", p);
+    },
+    changeText(p) {
+      this.$emit("change-text", p);
+    }
   }
 };
 </script>

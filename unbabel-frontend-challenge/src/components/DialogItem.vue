@@ -4,8 +4,14 @@
       <Checkbox/>
       <PersonIconSvg/>
       <div class="text">
-        <h3 contenteditable="true">{{transcription.voice}}</h3>
-        <p contenteditable="true">{{transcription.text}}</p>
+        <h3
+          v-on:blur="$emit('change-voice',{voice: $event.currentTarget.innerHTML, id: transcription.id})"
+          contenteditable="true"
+        >{{transcription.voice}}</h3>
+        <p
+          v-on:blur="$emit('change-text',{text: $event.currentTarget.innerHTML, id: transcription.id})"
+          contenteditable="true"
+        >{{transcription.text}}</p>
       </div>
     </div>
     <div class="right-dialog" v-on:click="$emit('del-transcription',transcription.id)">
@@ -25,6 +31,11 @@ export default {
   components: { Checkbox, PersonIconSvg, DeleteSvg },
   data() {
     return {};
+  },
+  methods: {
+    hello() {
+      alert("hello");
+    }
   }
 };
 </script>

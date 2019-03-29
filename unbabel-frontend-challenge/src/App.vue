@@ -5,6 +5,8 @@
       v-bind:transcriptions="transcriptions"
       v-on:del-transcription="deleteTranscription"
       v-on:new-line="newLine"
+      v-on:change-voice="changeVoice"
+      v-on:change-text="changeText"
     />
   </div>
 </template>
@@ -57,6 +59,12 @@ export default {
         .post(API_URL, this.transcriptions)
         .then(alert("Upload successful!"))
         .catch(err => alert(err));
+    },
+    changeVoice(p) {
+      this.transcriptions.find(x => x.id == p.id).voice = p.voice;
+    },
+    changeText(p) {
+      this.transcriptions.find(x => x.id == p.id).text = p.text;
     }
   }
 };

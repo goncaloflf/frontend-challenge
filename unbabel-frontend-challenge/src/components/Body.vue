@@ -1,6 +1,11 @@
 <template>
   <div id="body">
-    <Dialog v-bind:transcriptions="transcriptions" v-on:del-transcription="deleteTranscription"/>
+    <Dialog
+      v-bind:transcriptions="transcriptions"
+      v-on:del-transcription="deleteTranscription"
+      v-on:change-voice="changeVoice"
+      v-on:change-text="changeText"
+    />
     <AddNewLineButton v-on:new-line="$emit('new-line')"/>
   </div>
 </template>
@@ -19,6 +24,12 @@ export default {
   methods: {
     deleteTranscription(id) {
       this.$emit("del-transcription", id);
+    },
+    changeVoice(p) {
+      this.$emit("change-voice", p);
+    },
+    changeText(p) {
+      this.$emit("change-text", p);
     }
   }
 };
