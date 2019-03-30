@@ -24,6 +24,6 @@ npm run serve
 2. As requested, this solution was used using Vue.js.
 3. All images are SVG. This choice was based on two reasons: best rendering on high-res screens (such as MBP Retina displays) and having the ability to control aspects such as size/color from the components.
 4. All functionalities have been implemented.
-5. Axios was used instead of Fetch API for backwards compatibilitiy (IE11).
-6. Custom checkbox based on https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
+5. Custom checkbox based on https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
+6. All interactive elements (images with events and editable p and h3) have aria-label, for improved accessibility.
 7. Developed on Ubuntu 18.04.1 LTS x86_64, with Node.js v11.12.0 and npm v6.7.0. Tested on Chrome 73 and Firefox Quantum 66.

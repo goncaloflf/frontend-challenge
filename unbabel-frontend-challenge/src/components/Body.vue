@@ -6,7 +6,7 @@
       v-on:change-voice="changeVoice"
       v-on:change-text="changeText"
     />
-    <AddNewLineButton v-on:new-line="$emit('new-line')"/>
+    <AddNewLineButton v-on:new-line="$emit('new-line')" aria-label="Add new entry"/>
   </div>
 </template>
 

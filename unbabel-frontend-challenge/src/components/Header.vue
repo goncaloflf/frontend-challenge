@@ -3,8 +3,8 @@
     <div class="inner">
       <h1>{{title}}</h1>
       <div class="header-right">
-        <UploadSvg v-on:click="$emit('upload-data')"/>
-        <FetchDocumentSvg v-on:click="$emit('fetch-data')"/>
+        <UploadSvg v-on:click="$emit('upload-data')" aria-label="Upload current data"/>
+        <FetchDocumentSvg v-on:click="$emit('fetch-data')" aria-label="Fetch data from server"/>
       </div>
     </div>
   </header>

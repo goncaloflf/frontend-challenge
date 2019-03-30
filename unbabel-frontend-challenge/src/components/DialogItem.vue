@@ -7,14 +7,20 @@
         <h3
           v-on:blur="$emit('change-voice',{voice: $event.currentTarget.innerHTML, id: transcription.id})"
           contenteditable="true"
+          aria-label="Tap to edit"
         >{{transcription.voice}}</h3>
         <p
           v-on:blur="$emit('change-text',{text: $event.currentTarget.innerHTML, id: transcription.id})"
           contenteditable="true"
+          aria-label="Tap to edit"
         >{{transcription.text}}</p>
       </div>
     </div>
-    <div class="right-dialog" v-on:click="$emit('del-transcription',transcription.id)">
+    <div
+      class="right-dialog"
+      v-on:click="$emit('del-transcription',transcription.id)"
+      aria-label="Delete this entry"
+    >
       <DeleteSvg/>
     </div>
   </div>
